@@ -8,10 +8,16 @@ main {
     flex: 1 0 auto; /* Allows main content to grow and not shrink */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.container {
+.content {
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+.add {
+    position: relative;
+}
+.books {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    padding: 8px;
+    gap: 20px;
+    padding: 0 2em;
 }

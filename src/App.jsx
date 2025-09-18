@@ -17,11 +17,12 @@ function App() {
                 <div className='header'>
                     <Banner text='Book Catalog'></Banner>
                 </div>
-                <div className='container'>
+                <div className='content'>
                     <Button
+                        className='add'
                         size='large'
                         value='New'></Button>
-                    <div className='bk-container'>{books.map(showBooks)}</div>
+                    <div className='books'>{books.map(showBooks)}</div>
                 </div>
                 <div className='footer'>
                     <Banner text='Alyssa Huggins, 2025'></Banner>
