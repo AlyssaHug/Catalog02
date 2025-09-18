@@ -4,9 +4,13 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import Button from "./Buttons";
 import Banner from "./Banner";
-import Card from "./Card";
+import Book from "./Card";
+import books from "../data/books.json";
 
 function App() {
+    function showBooks(book) {
+        return <Book book={book} />;
+    }
     return (
         <body>
             <main>
@@ -17,14 +21,7 @@ function App() {
                     <Button
                         size='large'
                         value='New'></Button>
-                    <Card
-                        src='programming.png'
-                        text='By Jonathan Bartlett'
-                        href='https://itbook.store/books/9781484287507'></Card>
-                    <Card
-                        src='software.png'
-                        text='By Panagiotis Leludas'
-                        href='https://itbook.store/books/9781484295137'></Card>
+                    <div className='bk-container'>{books.map(showBooks)}</div>
                 </div>
                 <div className='footer'>
                     <Banner text='Alyssa Huggins, 2025'></Banner>

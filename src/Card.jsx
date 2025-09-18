@@ -1,13 +1,15 @@
-function Card(props) {
+function Book({ book }) {
     return (
         <div className='card'>
             <img
                 className='cardImg'
-                src={props.src}></img>
-            <h3 className='cardName'>{props.text}</h3>
+                src={book.image}
+                alt={book.title}
+            />
+            <h3 className='bk-price'>{book.price}</h3>
             <h3 className='learn'>
                 <a
-                    href={props.href}
+                    href={book.url}
                     target='_blank'>
                     Learn More
                 </a>
@@ -15,4 +17,4 @@ function Card(props) {
         </div>
     );
 }
-export default Card;
+export default Book;
