@@ -1,0 +1,17 @@
+html,
+body {
+    background: #edf2f7;
+    margin: 0;
+    padding: 0;
+}
+main {
+    flex: 1 0 auto; /* Allows main content to grow and not shrink */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 8px;
+}
